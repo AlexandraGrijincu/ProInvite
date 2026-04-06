@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+body {
+    background: url('../images/1.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* NAVIGARE - BUTOANE IN DREAPTA */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #1a2a3a; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #1a2a3a;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #5d7d88;
+    color: white;
+}
+
+.logout-btn { color: #c0392b !important; }
+
+/* CONTAINER GLASSMORPHISM */
+.container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 30px;
+    margin-top: 110px;
+    height: fit-content;
+}
+
+h1, h2 { text-align: center; color: white; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+
+input, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #5d7d88;
+    border-radius: 40px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+}
+
+textarea { border-radius: 20px; }
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 40px;
+    background: #1a2a3a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+.message { text-align: center; font-size: 14px; margin-top: 10px; min-height: 20px; font-weight: bold; }
+.toggle-text { color: white; text-align: center; margin-top: 15px; font-size: 14px; }
+.toggle-btn { text-decoration: underline; cursor: pointer; font-weight: bold; }
+
+/* GALERIE IMAGINI */
+.template-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.template-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid white;
+}

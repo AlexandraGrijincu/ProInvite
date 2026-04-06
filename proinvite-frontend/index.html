@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProInvite - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="main-nav" style="display: none;">
+    <label class="logo">ProInvite</label>
+    <ul id="nav-menu">
+        <li><a id="nav-form" class="active" href="#" onclick="showSection('invitation')">Formular</a></li>
+        <li><a id="nav-templates" href="#" onclick="showSection('gallery')">Template-uri</a></li>
+        <li><a href="#" onclick="location.reload()" class="logout-btn">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="container main-content" id="main-container">
+
+    <div id="register-section">
+        <h1>ProInvite</h1>
+        <h2>Înregistrare</h2>
+        <form id="registerForm">
+            <input type="text" id="reg_username" placeholder="Username" required>
+            <input type="email" id="reg_email" placeholder="Email" required>
+            <input type="password" id="reg_password" placeholder="Parola" required>
+            <button type="submit">Creează Cont</button>
+        </form>
+        <p id="registerMessage" class="message"></p>
+        <p class="toggle-text">Ai deja cont? <span class="toggle-btn" onclick="toggleAuth('login')">Loghează-te</span></p>
+    </div>
+
+    <div id="login-section" style="display: none;">
+        <h1>ProInvite</h1>
+        <h2>Autentificare</h2>
+        <form id="loginForm">
+            <input type="text" id="login_username" placeholder="Username" required>
+            <input type="password" id="login_password" placeholder="Parola" required>
+            <button type="submit">Intră în cont</button>
+        </form>
+        <p id="loginMessage" class="message"></p>
+        <p class="toggle-text">Nu ai cont? <span class="toggle-btn" onclick="toggleAuth('register')">Creează unul</span></p>
+    </div>
+
+    <div id="invitation-section" style="display: none;">
+        <h2>Generare Invitație</h2>
+        <form id="generateForm">
+            <input type="hidden" id="gen_userId">
+            <input type="number" id="gen_templateId" placeholder="Cod Template (ex: 1)" required>
+            <input type="text" id="gen_title" placeholder="Titlu Eveniment" required>
+            <input type="text" id="gen_date" placeholder="Data (ex: 20 Iunie 2024)" required>
+            <input type="text" id="gen_time" placeholder="Ora (ex: 18:00)" required>
+            <input type="text" id="gen_location" placeholder="Locație" required>
+            <textarea id="gen_description" placeholder="Scurt mesaj/descriere" rows="3"></textarea>
+            <button type="submit">GENEREAZĂ ACUM</button>
+        </form>
+        <p id="generateMessage" class="message"></p>
+    </div>
+
+    <div id="templates-section" style="display: none;">
+        <h2>Modele Disponibile</h2>
+        <div class="template-gallery">
+            <div class="template-card">
+                <img src="images/template1.png" alt="Model 1">
+                <div class="template-info">
+                    <strong>Aniversare</strong><br>
+                    <span class="template-code">Cod: 1</span>
+                </div>
+            </div>
+            <div class="template-card">
+                <img src="images/template2.png" alt="Model 2">
+                <div class="template-info">
+                    <strong>Elegant</strong><br>
+                    <span class="template-code">Cod: 2</span>
+                </div>
+            </div>
+            <div class="template-card">
+                <img src="images/template3.png" alt="Model 2">
+                <div class="template-info">
+                    <strong>Aniversare</strong><br>
+                    <span class="template-code">Cod: 3</span>
+                </div>
+            </div>
+            <div class="template-card">
+                <img src="images/template4.png" alt="Model 2">
+                <div class="template-info">
+                    <strong>Nunta</strong><br>
+                    <span class="template-code">Cod: 4</span>
+                </div>
+            </div>
+            <div class="template-card">
+                <img src="images/template5.png" alt="Model 2">
+                <div class="template-info">
+                    <strong>Nunta</strong><br>
+                    <span class="template-code">Cod: 6</span>
+                </div>
+            </div>
+            <div class="template-card">
+                <img src="images/template6.png" alt="Model 2">
+                <div class="template-info">
+                    <strong>Botez</strong><br>
+                    <span class="template-code">Cod: 7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
