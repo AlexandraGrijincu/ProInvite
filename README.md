@@ -11,3 +11,8 @@ ProInvite este o aplicație web care permite utilizatorilor autentificați să c
     * **Import Extern:** Posibilitatea de a importa template-uri noi prin utilizarea link-urilor directe către imagini de pe web.
 * **Autentificare & Inregistrare** Pentru a putea genera invitatii.
 * **Export PDF:** Generarea automată și descărcarea invitațiilor personalizate în format PDF.
+
+## Tehnologii Folosite
+* **Backend:** Java
+* **Bază de date:** SQL
+* **Frontend:** HTML, CSS, JavaScript
